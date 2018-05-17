@@ -24,7 +24,7 @@ public class JsonUtils {
      * @param <T>
      * @return
      */
-    public static <T> String objtoJson(T obj){
+    public static <T> String objectToJson(T obj){
         if (obj == null){
             return null;
         }

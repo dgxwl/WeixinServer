@@ -29,4 +29,17 @@ public class CustomizeController {
 			return "创建失败";
 		}
 	}
+	
+	@RequestMapping("/deletemenu")
+	@ResponseBody
+	public String deleteMenu(String appid, String appsecret) {    //TODO 同上
+		int result = customizeService.deleteMenu(appid, appsecret);
+		if (result == 0) {
+			//删除成功
+			return "删除成功";
+		} else {
+			//创建失败
+			return "删除失败";
+		}
+	}
 }
