@@ -2,7 +2,7 @@ package cn.weixin.service.iservice;
 
 import cn.weixin.entity.customizemenu.Menu;
 
-public interface ICustomizeService {
+public interface ICustomizeMenuService {
 	/**
 	 * 创建自定义菜单
 	 * @param menu

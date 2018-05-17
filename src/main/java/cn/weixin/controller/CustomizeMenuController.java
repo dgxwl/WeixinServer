@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.weixin.entity.customizemenu.Menu;
-import cn.weixin.service.iservice.ICustomizeService;
+import cn.weixin.service.iservice.ICustomizeMenuService;
 
 @Controller
 @RequestMapping("/customizemenu")
-public class CustomizeController {
+public class CustomizeMenuController {
 	
 	@Autowired
 	@Qualifier("customizeService")
-	private ICustomizeService customizeService;
+	private ICustomizeMenuService customizeService;
 	
 	@RequestMapping("/createmenu")
 	@ResponseBody

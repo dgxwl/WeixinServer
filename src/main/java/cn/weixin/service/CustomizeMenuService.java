@@ -8,13 +8,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cn.weixin.entity.customizemenu.Menu;
-import cn.weixin.service.iservice.ICustomizeService;
+import cn.weixin.service.iservice.ICustomizeMenuService;
 import cn.weixin.utils.AccessTokenUtil;
 import cn.weixin.utils.HttpClientUtil;
 import cn.weixin.utils.JsonUtils;
 
 @Service
-public class CustomizeService implements ICustomizeService {
+public class CustomizeMenuService implements ICustomizeMenuService {
 
 	@Override
 	public int createMenu(Menu menu, String appid, String appsecret) {
