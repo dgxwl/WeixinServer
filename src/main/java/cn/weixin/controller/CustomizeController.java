@@ -19,7 +19,7 @@ public class CustomizeController {
 	
 	@RequestMapping("/createmenu")
 	@ResponseBody
-	public String createMenu(Menu menu, String appid, String appsecret) {  //TODO 临时定义一个返回值,以后根据设计修改
+	public String createMenu(Menu menu, String appid, String appsecret) {  //TODO 临时定义一个返回值, 以后根据设计修改
 		int result = customizeService.createMenu(menu, appid, appsecret);
 		if (result == 0) {
 			//创建成功
