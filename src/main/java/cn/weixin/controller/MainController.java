@@ -35,15 +35,4 @@ public class MainController {
 	public String core(@RequestBody String xmlStr) {
 		return mainService.processRequest(xmlStr);
 	}
-	
-	@RequestMapping("/haha")
-	public String haha(int[] i) {
-		char[] c = new char[i.length];
-		StringBuilder s = new StringBuilder();
-		for (int j = 0; j < i.length; j++) {
-			c[j] = (char) i[j];
-			s.append(c[j]);
-		}
-		return s.toString();
-	}
 }
