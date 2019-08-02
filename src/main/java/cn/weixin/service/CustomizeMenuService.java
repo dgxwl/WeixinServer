@@ -19,7 +19,7 @@ public class CustomizeMenuService implements ICustomizeMenuService {
 	@Override
 	public int createMenu(Menu menu, String appid, String appsecret) {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/create"
-				+ "?access_token=" + AccessTokenUtil.getAccessToken(appid, appsecret);
+				+ "?access_token=" + AccessTokenUtil.getAccessToken();
 		String menuJson = JsonUtils.objectToJson(menu);
 		
 		String response = JsonUtils.sendJsonHttpPost(url, menuJson);
@@ -39,7 +39,7 @@ public class CustomizeMenuService implements ICustomizeMenuService {
 	@Override
 	public int deleteMenu(String appid, String appsecret) {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/delete"
-				+ "?access_token=" + AccessTokenUtil.getAccessToken(appid, appsecret);
+				+ "?access_token=" + AccessTokenUtil.getAccessToken();
 		String result = HttpClientUtil.getGetResponse(url);
 		
 		ObjectMapper mapper = new ObjectMapper();
