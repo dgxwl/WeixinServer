@@ -17,7 +17,7 @@ import cn.weixin.utils.JsonUtils;
 public class CustomizeMenuService implements ICustomizeMenuService {
 
 	@Override
-	public int createMenu(Menu menu, String appid, String appsecret) {
+	public int createMenu(Menu menu) {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/create"
 				+ "?access_token=" + AccessTokenUtil.getAccessToken();
 		String menuJson = JsonUtils.objectToJson(menu);
@@ -37,7 +37,7 @@ public class CustomizeMenuService implements ICustomizeMenuService {
 	}
 
 	@Override
-	public int deleteMenu(String appid, String appsecret) {
+	public int deleteAllMenu() {
 		String url = "https://api.weixin.qq.com/cgi-bin/menu/delete"
 				+ "?access_token=" + AccessTokenUtil.getAccessToken();
 		String result = HttpClientUtil.getGetResponse(url);

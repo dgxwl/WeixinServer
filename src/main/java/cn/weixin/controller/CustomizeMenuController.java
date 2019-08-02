@@ -17,8 +17,8 @@ public class CustomizeMenuController {
 	private ICustomizeMenuService customizeMenuService;
 	
 	@RequestMapping("/createmenu")
-	public String createMenu(Menu menu, String appid, String appsecret) {  //TODO 临时定义一个返回值, 以后根据设计修改
-		int result = customizeMenuService.createMenu(menu, appid, appsecret);
+	public String createMenu(Menu menu) {  //TODO 临时定义一个返回值, 以后根据设计修改
+		int result = customizeMenuService.createMenu(menu);
 		if (result == 0) {
 			//创建成功
 			return "创建成功";
@@ -28,9 +28,9 @@ public class CustomizeMenuController {
 		}
 	}
 	
-	@RequestMapping("/deletemenu")
-	public String deleteMenu(String appid, String appsecret) {    //TODO 同上
-		int result = customizeMenuService.deleteMenu(appid, appsecret);
+	@RequestMapping("/deleteAllMenu")
+	public String deleteAllMenu() {    //TODO 同上
+		int result = customizeMenuService.deleteAllMenu();
 		if (result == 0) {
 			//删除成功
 			return "删除成功";
